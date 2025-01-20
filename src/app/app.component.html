@@ -1,8 +1,9 @@
 <main class="main">
-  <div>
-    <app-header />
-    <app-footer />
-  </div>
+{{ internalMassage }}
+  <app-header />
+  <app-card (massageEvent)="receiveMassage($event)" [title]="dumydata.title" [content]="dumydata.content" />
+  <app-card (massageEvent)="receiveMassage($event)" title="my sec artikel" content="this is my content in sec artikel" />
+  <app-footer />
 </main>
 
 <router-outlet />
